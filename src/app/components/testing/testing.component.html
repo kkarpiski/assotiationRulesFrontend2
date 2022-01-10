@@ -1,0 +1,58 @@
+<div class="train-network-div">
+  <br><br>
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>C6H6</mat-label>
+      <input type="number" matInput id="C6H6" #C6H6>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>CO</mat-label>
+      <input type="number" matInput id="CO" #CO>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>NO2</mat-label>
+      <input type="number" matInput id="NO2" #NO2>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>O3</mat-label>
+      <input type="number" matInput id="O3" #O3>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>PM10</mat-label>
+      <input type="number" matInput id="PM10" #PM10>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>PM25</mat-label>
+      <input type="number" matInput id="PM25" #PM25>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>SO2</mat-label>
+      <input type="number" matInput id="SO2" #SO2>
+    </mat-form-field>
+    <br>
+  </form>
+  <button *ngIf="!isLoader" mat-raised-button (click)="onButtonClick()">KLASYFIKUJ</button>
+  <mat-spinner *ngIf="isLoader"></mat-spinner>
+</div>
+
+<br><br><br>
+
+<div *ngIf="result" style="background-color:{{resultColor}}">
+  WYNIK: {{result}}
+</div>
+
+<div *ngIf="realResult" style="background-color:{{realResultColor}}">
+  POPRAWNY WYNIK: {{realResult}}
+</div>

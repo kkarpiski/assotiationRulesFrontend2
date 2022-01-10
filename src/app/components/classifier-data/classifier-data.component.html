@@ -1,0 +1,46 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="NAZWA">
+    <th mat-header-cell *matHeaderCellDef> NAZWA </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="ROZMIAR ZESTAWU UCZĄCEGO">
+    <th mat-header-cell *matHeaderCellDef> ROZMIAR ZESTAWU UCZĄCEGO </th>
+    <td mat-cell *matCellDef="let element"> {{element.trainingSetSize}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="ILOŚĆ KLASYFIKACJI">
+    <th mat-header-cell *matHeaderCellDef> ILOŚĆ KLASYFIKACJI </th>
+    <td mat-cell *matCellDef="let element"> {{element.testsAmount}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="SKUTECZNOŚĆ">
+    <th mat-header-cell *matHeaderCellDef> SKUTECZNOŚĆ </th>
+    <td mat-cell *matCellDef="let element"> {{element.effectiveness}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<br><br><br><br><br>
+<div class="train-network-div">
+  UCZENIE SIECI (ilość rekordów w bazie {{totalAvailableResults}})
+  <br><br>
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>NAZWA</mat-label>
+      <input matInput id="newNetworkName" #newNetworkName>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>ROZMIAR ZESTAWU UCZĄCEGO</mat-label>
+      <input type="number" matInput id="newNetworkTrainingSize" #newNetworkTrainingSize>
+    </mat-form-field>
+  </form>
+  <button *ngIf="!isLoader" mat-raised-button (click)="onButtonClick()">TRENUJ SIEĆ</button>
+  <mat-spinner *ngIf="isLoader"></mat-spinner>
+</div>
+
+
