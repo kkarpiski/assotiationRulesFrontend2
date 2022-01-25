@@ -1,3 +1,51 @@
 table {
   width: 100%;
 }
+.mat-column-station_name {
+  width: 200px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+}
+
+.mat-column-date {
+  width: 250px;
+  padding-right: 24px;
+  text-align: center;
+}
+
+.mat-column-weather {
+  width: 120px;
+}
+.mat-column-C6H6{
+  width: 90px;
+  text-align: center;
+}
+.mat-column-CO{
+  width: 90px;
+  text-align: center;
+}
+.mat-column-NO2{
+  width: 90px;
+  text-align: center;
+}
+.mat-column-O3{
+  width: 90px;
+  text-align: center;
+}
+.mat-column-PM10{
+  width: 90px;
+  text-align: center;
+}
+.mat-column-PM25{
+  width: 90px;
+  text-align: center;
+}
+.mat-column-SO2{
+  width: 90px;
+  text-align: center;
+}
+.mat-column-class{
+  width: 200px;
+  text-align: center;
+}

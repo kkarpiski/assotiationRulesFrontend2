@@ -24,6 +24,9 @@ import {AirQualityDataComponent} from "./components/air-quality-data/air-quality
 import {ClassifierDataComponent} from "./components/classifier-data/classifier-data.component";
 import {TestingComponent} from "./components/testing/testing.component";
 import {ApiService} from "./resources/services/api.service";
+import {MatTabsModule} from "@angular/material/tabs";
+import {MatSortModule} from "@angular/material/sort";
+import {WeatherDataComponent} from "./components/weather_data/weather_data.component";
 
 
 @NgModule({
@@ -35,7 +38,8 @@ import {ApiService} from "./resources/services/api.service";
     SidenavComponent,
     AirQualityDataComponent,
     ClassifierDataComponent,
-    TestingComponent
+    TestingComponent,
+    WeatherDataComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +56,9 @@ import {ApiService} from "./resources/services/api.service";
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTabsModule,
+    MatSortModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent],

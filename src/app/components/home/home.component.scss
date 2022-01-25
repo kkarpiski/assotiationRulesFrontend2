@@ -9,16 +9,17 @@
    font-size: 36px;
  }
 &__content {
-   min-height: calc(100vh - 178px);
-   border-radius: 10px;
-   margin-top: -2rem;
-   background: white;
-   color: black;
-   font-size: 2rem;
+  min-height: calc(1068vh);
+  border-radius: 10px;
+  margin-top: -2rem;
+  background: white;
+  color: black;
+  font-size: 2rem;
+  height: auto;
+}
 &-data {
-   top: 50%;
-   left: 50%;
+   top: auto;
+   left: auto;
    transform: translate(-50%, -50%);
  }
-}
 }

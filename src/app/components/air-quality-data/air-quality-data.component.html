@@ -1,16 +1,16 @@
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-  <ng-container matColumnDef="NAZWA STACJI">
+  <ng-container matColumnDef="station_name">
     <th mat-header-cell *matHeaderCellDef=> NAZWA STACJI </th>
     <td mat-cell *matCellDef="let element"> {{element.stationName}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="DATA POMIARU">
+  <ng-container matColumnDef="date">
     <th mat-header-cell *matHeaderCellDef> DATA POMIARU </th>
     <td mat-cell *matCellDef="let element"> {{element.measurementDate}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="POGODA">
+  <ng-container matColumnDef="weather">
     <th mat-header-cell *matHeaderCellDef> POGODA </th>
     <td mat-cell *matCellDef="let element">{{element.result}} </td>
   </ng-container>
@@ -50,13 +50,8 @@
     <td mat-cell *matCellDef="let element"> {{element.SO2}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="WYNIK">
-    <th mat-header-cell *matHeaderCellDef> WYNIK </th>
-    <td mat-cell *matCellDef="let element" style="background-color:{{element.resultColor}}"> {{element.result}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="KLASA">
-    <th mat-header-cell *matHeaderCellDef> KLASA </th>
+  <ng-container matColumnDef="class">
+    <th mat-header-cell *matHeaderCellDef> KLASYFIKACJA (wg. Gios) </th>
     <td mat-cell *matCellDef="let element" style="background-color:{{element.realResultColor}}"> {{element.realResult}} </td>
   </ng-container>
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
